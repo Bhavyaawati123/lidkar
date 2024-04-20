@@ -2,11 +2,15 @@ package com.backend.entity;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -27,11 +31,21 @@ public class User implements UserDetails {
     private String password;
     private Date dateOfBirth;
     private String address;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Cart> cart;
+	
+	public List<Cart> getCart() {
+		return cart;
+	}
+	public void setCart(List<Cart> cart) {
+		this.cart = cart;
+	}
 	public User() {
 		super();
 	}
+	
 	public User(Long userId, String firstName, String lastName, String userName, String email, String mobileNumber,
-			String password, Date dateOfBirth, String address) {
+			String password, Date dateOfBirth, String address, List<Cart> cart) {
 		super();
 		this.userId = userId;
 		this.firstName = firstName;
@@ -42,6 +56,7 @@ public class User implements UserDetails {
 		this.password = password;
 		this.dateOfBirth = dateOfBirth;
 		this.address = address;
+		this.cart = cart;
 	}
 	public Long getUserId() {
 		return userId;

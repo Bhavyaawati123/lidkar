@@ -33,8 +33,8 @@ public class Category {
     @Column(name = "description")
     private String description;
 
-//    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    private List<Products> products = new ArrayList<>();
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Product> products = new ArrayList<>();
   
 
 
@@ -46,12 +46,16 @@ public class Category {
 
 	
 
-	public Category(Long categoryId, String title, String description) {
+
+
+
+
+	public Category(Long categoryId, String title, String description, List<Product> products) {
 		super();
 		this.categoryId = categoryId;
 		this.title = title;
 		this.description = description;
-//		this.products = products;
+		this.products = products;
 	}
 
 
@@ -82,13 +86,13 @@ public class Category {
 		this.description = description;
 	}
 
-//	public List<Products> getProducts() {
-//		return products;
-//	}
-//
-//	public void setProducts(List<Products> products) {
-//		this.products = products;
-//	}
+	public List<Product> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
 
 
 

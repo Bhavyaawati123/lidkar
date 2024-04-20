@@ -1,20 +1,11 @@
 package com.backend.repository;
 
-
-
-
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import org.springframework.stereotype.Repository;
 
-import com.backend.entity.Category;
-import com.backend.entity.Product;
-
+import com.backend.entity.Image;
 
 @Repository
-public interface CategoryRepo extends JpaRepository<Category, Long> {
-
-	
-	 
+public interface ImageRepo  extends JpaRepository<Image, Long> {
 
 }

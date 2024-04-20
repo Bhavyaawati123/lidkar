@@ -34,7 +34,7 @@ import com.backend.security.*;
 public class SecurityConfig {
 
     public static final String[] PUBLIC_URLS = {"/api/v1/auth/**",
-    		"/api/product/**"
+"/category/**","/api/product/**","/api/cart/**","/api/image/**"
 
     };
 

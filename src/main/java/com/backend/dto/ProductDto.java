@@ -6,8 +6,8 @@ public class ProductDto {
 
 	    private String productName;
 
-	    private String productPhone;
-	    private String productAddress;
+	    private String productUrl;
+	    private String productDetails;
 		public Long getProductId() {
 			return productId;
 		}
@@ -20,19 +20,18 @@ public class ProductDto {
 		public void setProductName(String productName) {
 			this.productName = productName;
 		}
-		public String getProductPhone() {
-			return productPhone;
+		public String getProductUrl() {
+			return productUrl;
 		}
-		public void setProductPhone(String productPhone) {
-			this.productPhone = productPhone;
+		public void setProductUrl(String productUrl) {
+			this.productUrl = productUrl;
 		}
-		public String getProductAddress() {
-			return productAddress;
+		public String getProductDetails() {
+			return productDetails;
 		}
-		public void setProductAddress(String productAddress) {
-			this.productAddress = productAddress;
+		public void setProductDetails(String productDetails) {
+			this.productDetails = productDetails;
 		}
-
 		
 
 	

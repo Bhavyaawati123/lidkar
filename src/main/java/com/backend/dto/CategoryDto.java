@@ -11,17 +11,7 @@ public class CategoryDto {
     private String description;
 
 
-    public CategoryDto() {
-        super();
-    }
-
-    public CategoryDto(Long categoryId, String title, String description) {
-        super();
-        this.categoryId = categoryId;
-        this.title = title;
-        this.description = description;
-       
-    }
+   
 
     public Long getCategoryId() {
         return categoryId;
